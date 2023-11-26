@@ -4,9 +4,10 @@
   "description": "",
   "main": "index.js",
   "scripts": {
+    "build": "babel index.js src -d dist",
     "test": "echo \"Error: no test specified\" && exit 1",
     "dev": "nodemon --exec babel-node index.js",
-    "start": "NODE_ENV=production babel-node index.js"
+    "start": "NODE_ENV=production ./node_modules/.bin/babel-node index.js"
   },
   "keywords": [],
   "author": "",
@@ -34,12 +35,7 @@
     "openai": "^3.2.1",
     "promise-mysql": "^5.2.0",
     "sequelize": "^6.33.0",
-    "sqlstring": "^2.3.3",
-    "@babel/cli": "^7.23.0",
-    "@babel/core": "^7.23.3",
-    "@babel/node": "^7.22.19",
-    "@babel/preset-env": "^7.23.3",
-    "nodemon": "^3.0.1"
+    "sqlstring": "^2.3.3"
   },
   "devDependencies": {
     "@babel/cli": "^7.23.0",
