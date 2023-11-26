@@ -60,12 +60,12 @@ export const login = async (req, res) => {
 export const register = async (req, res) => {
     const {nombre, usuario, correo} = req.body
     try {
-        const usuario = new Usuario({
+        const user = new Usuario({
             nombre: nombre,
             usuario: usuario,
             correo: correo
         })
-        await usuario.save()
+        await user.save()
         res.status(200).json({message: "ok"})
     } catch (error) {
         if (error.code === 11000 && error.keyPattern && error.keyPattern.correo) {
