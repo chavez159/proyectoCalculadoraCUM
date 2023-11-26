@@ -1,7 +1,7 @@
 import { Router } from "express";
 
-import { verificarToken } from "../middlewares/verificarToken";
-import { agregarRespuesta, crearPregunta, eliminarPregunta, misPreguntas, traerTodasPreguntas } from "../controllers/FAQController";
+import { verificarToken } from "../middlewares/verificarToken.js";
+import { agregarRespuesta, crearPregunta, eliminarPregunta, misPreguntas, traerTodasPreguntas } from "../controllers/FAQController.js";
 
 const router = Router();
 

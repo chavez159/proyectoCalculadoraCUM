@@ -1,6 +1,5 @@
 import mongoose from "mongoose";
-import { db } from "../database/mongo";
-import { string } from "joi";
+
 
 
 

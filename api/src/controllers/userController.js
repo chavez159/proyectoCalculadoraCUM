@@ -1,7 +1,7 @@
-import { db } from "../database/mongo"
-import { tarea } from "../models/tareasModel"
-import { Usuario } from "../models/usuariosModel"
-const Jwt = require('jsonwebtoken')
+
+import { tarea } from "../models/tareasModel.js"
+import { Usuario } from "../models/usuariosModel.js"
+import Jwt from 'jsonwebtoken';
 
 export const testController = async (req, res) => {
 const usuarios =  await Usuario.find({})

@@ -1,4 +1,4 @@
-const Jwt = require('jsonwebtoken')
+import Jwt from 'jsonwebtoken';
 
 export const verificarToken = (req, res, next) => {
     const token = req.headers.authorization ? req.headers.authorization.split(' ')[1]

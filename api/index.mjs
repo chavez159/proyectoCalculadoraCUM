@@ -1,4 +1,4 @@
-import app from "./src/app.js"
+import app from "./src/app.mjs"
 import mongoose from "mongoose"
 
 const main = () => {

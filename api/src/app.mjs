@@ -2,9 +2,9 @@ import express from "express";
 import morgan from "morgan";
 import cors from "cors";
 import bodyParser  from 'body-parser'
-import userRoutes from "./routes/userRoutes";
-import noticiasRoutes from "./routes/noticiasRoutes";
-import faqRoutes from "./routes/FaqRoutes";
+import userRoutes from "./routes/userRoutes.js";
+import noticiasRoutes from "./routes/noticiasRoutes.js";
+import faqRoutes from "./routes/FaqRoutes.js";
 import mongoose from "mongoose";
 const app = express();
 

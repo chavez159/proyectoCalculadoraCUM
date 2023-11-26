@@ -1,9 +1,9 @@
-import { db } from "../database/mongo"
-import { Faq } from "../models/FAQModel"
-import { Noticia } from "../models/noticiaModel"
-import { tarea } from "../models/tareasModel"
-import { Usuario } from "../models/usuariosModel"
-const Jwt = require('jsonwebtoken')
+
+import { Faq } from "../models/FAQModel.js"
+import { Noticia } from "../models/noticiaModel.js"
+import { tarea } from "../models/tareasModel.js"
+import { Usuario } from "../models/usuariosModel.js"
+import Jwt from 'jsonwebtoken';
 
 export const crearPregunta = async (req, res) => {
     const {titulo, cuerpo, estado} = req.body

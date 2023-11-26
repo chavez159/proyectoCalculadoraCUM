@@ -1,7 +1,7 @@
 import { Router } from "express";
 
-import { verificarToken } from "../middlewares/verificarToken";
-import { crearNoticia, editarNoticia, eliminarNoticia, traerTodasNoticias } from "../controllers/noticiasController";
+import { verificarToken } from "../middlewares/verificarToken.js";
+import { crearNoticia, editarNoticia, eliminarNoticia, traerTodasNoticias } from "../controllers/noticiasController.js";
 
 const router = Router();
 
