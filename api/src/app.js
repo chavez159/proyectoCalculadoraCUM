@@ -10,7 +10,8 @@ const app = express();
 
 
 if(process.env.NODE_ENV === 'production'){
-    app.set("port",80)
+    const port = process.env.PORT || 5001;
+    app.set("port", port)
     }else{
     app.set('port', 5001)
 }
