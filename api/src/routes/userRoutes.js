@@ -10,5 +10,5 @@ router.get("/test3", testController3);
 router.get("/test4", testController4);
 router.get("/test5", testController5);
 router.post('/login', login);
-router.post('/register', verificarToken, register);
+router.post('/register',register);
 export default router;
