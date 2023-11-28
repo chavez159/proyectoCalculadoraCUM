@@ -23,7 +23,7 @@ export const crearNoticia = async (req, res) => {
 
 export const traerTodasNoticias = async (req, res) => {
     try {
-        const noticias = await Noticia.find({})
+        const noticias = await Noticia.find({estado: true})
         res.status(200).json(noticias)
     } catch (error) {
         console.log(error)
