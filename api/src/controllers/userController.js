@@ -63,7 +63,8 @@ export const register = async (req, res) => {
         const user = new Usuario({
             nombre: nombre,
             usuario: usuario,
-            correo: correo
+            correo: correo,
+            rol: "usuario"
         })
         await user.save()
         res.status(200).json({message: "ok"})
@@ -79,4 +80,27 @@ export const register = async (req, res) => {
     }
 
 }
+export const darAdmin = async (req, res) => {
+    const {correo} = req.body
+    try {
+        const usuario = await Usuario.findOne({correo: correo})
+        usuario.rol = "admin"
+        usuario.save()
+        res.status(200).json({message: "ok"})
+    } catch (error) {
+        console.log(error)
+        res.status(400).json({message: "error"})
+    }
+}
 
+export const revisarRol = async (req, res) => {
+    const token = req.headers.authorization ? req.headers.authorization.split(' ')[1] : null
+    const decoded = Jwt.verify(token, 'palabraSecreta')
+    try {
+        const usuario = await Usuario.findOne({_id: decoded.usuario[0]._id})
+        res.status(200).json({rol: usuario.rol})
+    } catch (error) {
+        console.log(error)
+        res.status(400).json({message: "error"})
+    }
+}
